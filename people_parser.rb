@@ -25,8 +25,9 @@ class PeopleParser
 
   def to_s
     @people.map do |person|
+      # binding.pry
       person.instance_variables.map do |attribute| 
-        person.instance_variable_get(attribute)
+        person.send(attribute[1..-1])
       end.join(" ")
     end.join("\n")
   end  

@@ -1,9 +1,9 @@
 require 'date'
+require 'pry'
 
 class Person
 
   attr_reader :last_name, :first_name, :gender, :favorite_color
-  attr_writer :birth_date
 
   def initialize(args)
     @last_name = args.fetch(:last_name)
@@ -14,7 +14,7 @@ class Person
   end  
 
   def birth_date
-    @birth_date.strftime("%m/%d/%Y")
+    @birth_date.strftime("%-m/%-d/%Y")
   end
   
   private
