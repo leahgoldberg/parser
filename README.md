@@ -20,4 +20,4 @@ It outputs an aggreate of all the data to the console using the following comman
 
 Run `bundle install` to install rspec and dependencies
 
-`rspec` will run all tests, while `rspec <file_name>` will run only the chosen unit test
+`rspec spec/` will run all tests, while `rspec spec/<file_name>` will run only the chosen unit test
