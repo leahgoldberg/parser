@@ -1,0 +1,9 @@
+Kournikova Anna Female 1975-06-03T00:00:00+00:00 Red
+Hingis Martina Female 1979-04-02T00:00:00+00:00 Green
+Seles Monica Female 1973-12-02T00:00:00+00:00 Black
+Smith Steve Male 1985-03-03T00:00:00+00:00 Red
+Bonk Radek Male 1975-06-03T00:00:00+00:00 Green
+Bouillon Francis Male 1975-06-03T00:00:00+00:00 Blue
+Abercrombie Neil Male 1943-02-13T00:00:00+00:00 Tan
+Bishop Timothy Male 1967-04-23T00:00:00+00:00 Yellow
+Kelly Sue Female 1959-07-12T00:00:00+00:00 Pink
