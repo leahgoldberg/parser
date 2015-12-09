@@ -4,6 +4,8 @@ require_relative 'person'
 
 class PeopleParser
 
+  attr_reader :people
+
   include Parser
 
   def initialize(file_names)
@@ -25,7 +27,6 @@ class PeopleParser
 
   def to_s
     @people.map do |person|
-      # binding.pry
       person.instance_variables.map do |attribute| 
         person.send(attribute[1..-1])
       end.join(" ")
