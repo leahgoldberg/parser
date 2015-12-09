@@ -1,9 +1,21 @@
 require_relative 'people_parser'
 
+def print_stars
+  "\n" + "*"*50 + "\n\n"
+end  
+
 files = ["inputs/input1.txt", "inputs/input2.txt", "inputs/input3.txt"]
 parse = PeopleParser.new(files)
+
+parse.sort_by_attributes_asc(["gender", "last_name"])
 puts parse.to_s
-# p parse.people
-# parse.sort_by_attributes_asc("outputs/output1.txt", ["gender", "last_name"])
-# parse.sort_by_birth("outputs/output2.txt")
-# parse.sort_by_attribute_desc("outputs/output3.txt", "last_name")
+puts print_stars
+
+parse.sort_by_attributes_asc(["birth_date", "last_name"])
+puts parse.to_s
+puts print_stars
+
+parse.sort_by_attribute_desc("last_name")
+puts parse.to_s
+puts print_stars
+
