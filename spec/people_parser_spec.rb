@@ -1,5 +1,4 @@
 require_relative '../people_parser'
-require 'pry'
 
 describe PeopleParser do
 
