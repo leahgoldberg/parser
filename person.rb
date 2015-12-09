@@ -3,9 +3,10 @@ require_relative 'parser'
 
 class Person
 
-  include Parser
   attr_reader :last_name, :first_name, :gender, :favorite_color
   attr_writer :birth_date
+
+  include Parser
 
   def initialize(args)
     @last_name = args.fetch(:last_name)
@@ -15,21 +16,22 @@ class Person
     @favorite_color = args.fetch(:favorite_color)
   end  
 
-  def self.from_file
-
+  def self.from_file(files)
+    people_data = files.map { |file| Parser.import(file) }.flatten
+    people_data.map { |person| Person.new(person)}
   end
 
-  def birth_date=
-    @birth_date = value
-  end
+  # def birth_date=
+  #   @birth_date = value
+  # end
 
   def birth_date
     @birth_date.strftime("%m/%d/%Y")
   end
 
-  def display_birth_date
-    self.birth_date = birth_date.strftime('%-m/%-d/%Y')
-  end  
+  # def display_birth_date
+  #   self.birth_date = birth_date.strftime('%-m/%-d/%Y')
+  # end  
   
   private
 
@@ -43,3 +45,6 @@ class Person
   end  
 
 end  
+
+files = ["inputs/input1.txt", "inputs/input2.txt", "inputs/input3.txt"]
+p Person.from_file(files)
