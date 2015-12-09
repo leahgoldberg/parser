@@ -13,7 +13,7 @@ class PeopleParser
 
   def sort_by_attributes_asc(attributes)
     @people.sort_by! do |person| 
-      attributes.map { |attrib| person.instance_variable_get("@#{attrib}") }
+      attributes.map { |attribute| person.instance_variable_get("@#{attribute}") }
     end  
   end  
 
@@ -25,8 +25,8 @@ class PeopleParser
 
   def to_s
     @people.map do |person|
-      person.instance_variables.map do |attrib| 
-        person.instance_variable_get(attrib)
+      person.instance_variables.map do |attribute| 
+        person.instance_variable_get(attribute)
       end.join(" ")
     end.join("\n")
   end  
